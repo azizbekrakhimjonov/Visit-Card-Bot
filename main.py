@@ -134,7 +134,6 @@ async def load_make(message: types.Message, state: FSMContext):
                     await bot.send_document(message.chat.id, InputFile(fg))
                 with open('2.png', 'rb') as fg2:
                     await bot.send_document(message.chat.id, InputFile(fg2))
-
             except Exception as e:
                 print(f"An error: {str(e)}")
                 await message.answer('Some error to image', reply_markup=ReplyKeyboardRemove())
